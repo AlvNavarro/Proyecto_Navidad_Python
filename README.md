@@ -4,18 +4,24 @@
 
 ### Clonar el repositorio
 
+```bash
 git clone https://github.com/usuario/nombre-repositorio.git
 cd nombre-repositorio
+```
 
 ### Configurar tu identidad
 
+```bash
 git config --global user.name "Tu Nombre"
 git config --global user.email "tu.email@ejemplo.com"
+```
 
 ### Crear tu rama personal
 
+```bash
 git checkout -b tu-nombre
 git push -u origin tu-nombre
+```
 
 ---
 
@@ -23,13 +29,16 @@ git push -u origin tu-nombre
 
 ### Al empezar a trabajar cada día
 
+```bash
 git checkout main
 git pull origin main
 git checkout tu-nombre
 git merge main
+```
 
 ### Guardar tu trabajo
 
+```bash
 # Ver qué archivos has modificado
 git status
 
@@ -41,17 +50,21 @@ git commit -m "Descripción de lo que has hecho"
 
 # Subir a GitHub
 git push origin tu-nombre
+```
 
 ### Ver el trabajo de un compañero
 
+```bash
 # Traer todas las actualizaciones
 git fetch origin
 
 # Cambiar a la rama de tu compañero
 git checkout rama-compañero
+```
 
 ### Traer cambios de un compañero a tu rama
 
+```bash
 # Volver a tu rama
 git checkout tu-nombre
 
@@ -60,6 +73,7 @@ git merge rama-compañero
 
 # Subir los cambios
 git push origin tu-nombre
+```
 
 ---
 
@@ -67,11 +81,13 @@ git push origin tu-nombre
 
 ### Actualizar tu rama antes de integrar
 
+```bash
 git checkout main
 git pull origin main
 git checkout tu-nombre
 git merge main
 git push origin tu-nombre
+```
 
 ### Opción 1: Pull Request (Recomendado)
 
@@ -82,9 +98,11 @@ git push origin tu-nombre
 
 ### Opción 2: Merge directo
 
+```bash
 git checkout main
 git merge tu-nombre
 git push origin main
+```
 
 ---
 
@@ -92,6 +110,7 @@ git push origin main
 
 ### Cuando aparecen conflictos
 
+```bash
 # Ver archivos con conflictos
 git status
 
@@ -111,6 +130,7 @@ git add .
 # Completar el merge
 git commit -m "Conflictos resueltos"
 git push origin tu-nombre
+```
 
 ---
 
@@ -118,6 +138,7 @@ git push origin tu-nombre
 
 ### Ver información
 
+```bash
 # Ver historial de cambios
 git log --oneline --graph
 
@@ -129,9 +150,11 @@ git diff
 
 # Ver cambios ya añadidos (después de git add)
 git diff --staged
+```
 
 ### Deshacer cambios
 
+```bash
 # Descartar cambios en un archivo (antes de git add)
 git checkout -- nombre-archivo
 
@@ -140,14 +163,17 @@ git reset HEAD nombre-archivo
 
 # Deshacer último commit (mantiene los cambios)
 git reset --soft HEAD~1
+```
 
 ### Actualizar
 
+```bash
 # Traer cambios de tu rama remota
 git pull origin tu-nombre
 
 # Traer info de todas las ramas sin fusionar
 git fetch origin
+```
 
 ---
 
@@ -155,6 +181,7 @@ git fetch origin
 
 ### Rutina diaria completa
 
+```bash
 # 1. Al empezar el día - Actualizar
 git checkout main
 git pull origin main
@@ -171,14 +198,17 @@ git checkout main
 git pull origin main
 git checkout tu-nombre
 git merge main
+```
 
 ### Comando rápido todo-en-uno
 
+```bash
 # Al empezar
 git checkout main && git pull origin main && git checkout tu-nombre && git merge main
 
 # Al guardar
 git add . && git commit -m "descripción" && git push origin tu-nombre
+```
 
 ---
 
@@ -186,6 +216,7 @@ git add . && git commit -m "descripción" && git push origin tu-nombre
 
 Si algo va mal:
 
+```bash
 # Ver en qué estado estás
 git status
 
@@ -195,3 +226,6 @@ git branch
 # Volver a un estado estable
 git checkout tu-nombre
 git pull origin tu-nombre
+```
+
+**Recuerda:** En Git casi siempre hay forma de recuperar el trabajo. Si tienes dudas, pide ayuda antes de forzar cambios con comandos como `--force`.
