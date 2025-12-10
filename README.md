@@ -227,5 +227,3 @@ git branch
 git checkout tu-nombre
 git pull origin tu-nombre
 ```
-
-**Recuerda:** En Git casi siempre hay forma de recuperar el trabajo. Si tienes dudas, pide ayuda antes de forzar cambios con comandos como `--force`.
